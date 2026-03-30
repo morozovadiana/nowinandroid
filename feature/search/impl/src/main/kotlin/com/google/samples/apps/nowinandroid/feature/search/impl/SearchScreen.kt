@@ -405,7 +405,8 @@ private fun RecentSearchesBody(
                         append(stringResource(id = searchR.string.feature_search_api_recent_searches))
                     }
                 },
-                modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
+                modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
+                    .testTag("recentSearches"),
             )
             if (recentSearchQueries.isNotEmpty()) {
                 IconButton(
@@ -457,7 +458,8 @@ private fun SearchToolbar(
                 contentDescription = stringResource(
                     id = string.core_ui_back,
                 ),
-            )
+                modifier = Modifier.testTag("backButton")
+                )
         }
         SearchTextField(
             onSearchQueryChanged = onSearchQueryChanged,
@@ -494,6 +496,7 @@ private fun SearchTextField(
                     id = searchR.string.feature_search_api_title,
                 ),
                 tint = MaterialTheme.colorScheme.onSurface,
+                modifier = Modifier.testTag("searchIcon"),
             )
         },
         trailingIcon = {
