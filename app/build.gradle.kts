@@ -68,6 +68,14 @@ android {
 }
 
 dependencies {
+    androidTestImplementation("com.kaspersky.android-components:kaspresso:1.6.0") {
+        exclude(module = "protobuf-lite")
+    }
+    androidTestImplementation("com.kaspersky.android-components:kaspresso-compose-support:1.6.0") {
+        exclude(module = "protobuf-lite")
+    }
+    implementation("androidx.drawerlayout:drawerlayout:1.2.0")
+    androidTestImplementation("io.github.kakaocup:compose:1.1.0")
     implementation(projects.feature.interests.api)
     implementation(projects.feature.interests.impl)
     implementation(projects.feature.foryou.api)

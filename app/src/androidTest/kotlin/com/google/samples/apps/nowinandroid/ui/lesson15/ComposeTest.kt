@@ -16,7 +16,6 @@
 
 package com.google.samples.apps.nowinandroid.ui.lesson15
 
-import androidx.compose.ui.test.SemanticsNodeInteractionsProvider
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import com.google.samples.apps.nowinandroid.MainActivity
 import com.kaspersky.components.composesupport.config.withComposeSupport
